@@ -3,9 +3,9 @@
 
 = Introduction =
 
-kstkeip is a very low granularity counter, few processes worth attacking are compute bound for long periods of time. With the very few unique samples that can be acquired, it's not immediately obvious whether this information leak is useful or not (note that due to the way PT_LOAD typically works, data will be mapped immediately adjacent to text).
+kstkeip is a very low granularity counter, few processes worth attacking are compute bound for long periods of time. With the very few unique samples that can be acquired, it's not immediately obvious whether this information leak is useful or not (note that due to the way linkers typically use PT_LOAD, data will be mapped immediately adjacent to text).
 
-Fuzzy Aslr is a Proof of Concept implementation that attempts to "guess" the address space layout of a process you don't own via kstkeip.
+Fuzzy Aslr is a Proof of Concept implementation that attempts to "reconstruct" the address space layout of a process you don't own via kstkeip.
 
 Thanks to x86 being a variable width architecture, by recursively disassembling the target binary and all DT_NEEDED dependencies and recording the instruction boundaries it encounters, we're able to build up a fingerprint of each section of code that will be mapped.
 
