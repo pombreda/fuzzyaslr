@@ -92,4 +92,4 @@ $ sudo grep -A1 00bb5000-00cf3000 /proc/3526/maps
 00cf3000-00cf5000 r--p 0013e000 fd:00 30507077   /lib/libc-2.5.so
 }}}
 
-Exactly right!
+Exactly right! aslr will continue until it's been able to reconstruct the entire layout.
