@@ -66,7 +66,7 @@ $ while :; do ssh localhost true; done
 
 And the output from aslr:
 
-{{
+{{{
 sample.c:040,s_record():info: new unique sample 0x358410
 sample.c:040,s_record():info: new unique sample 0xc1a379
 sample.c:040,s_record():info: new unique sample 0xc464f6
