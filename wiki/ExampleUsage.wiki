@@ -7,7 +7,7 @@ kstkeip is a very low granularity counter, few processes worth attacking are com
 
 Fuzzy Aslr is a Proof of Concept implementation that attempts to "reconstruct" the address space layout of a process you don't own via kstkeip.
 
-Thanks to x86 being a variable width architecture, by recursively disassembling the target binary and all DT_NEEDED dependencies and recording the instruction boundaries it encounters, we're able to build up a fingerprint of each section of code that will be mapped.
+Thanks to x86 being a variable width instruction architecture, by recursively disassembling the target binary and all DT_NEEDED dependencies and recording the instruction boundaries it encounters, we're able to build up a fingerprint of each section of code that will be mapped.
 
 Surprisingly, just a few (6 or so) samples of kstskeip from the same mapping is enough to uniquely fingerprint most code.
 
