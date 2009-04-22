@@ -84,7 +84,7 @@ sample.c:040,s_record():info: new unique sample 0x791490
 ...
 }}}
 
-Just 13 unique samples from kstkeip was enough to guess where libc.so was mapped, and checking if it's correct:
+Just 13 unique samples from kstkeip were enough to guess where libc.so was mapped, and checking if it's correct:
 
 {{{
 $ sudo grep -A1 00bb5000-00cf3000 /proc/3526/maps
