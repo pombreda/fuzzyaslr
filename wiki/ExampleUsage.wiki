@@ -19,7 +19,7 @@ I am unable to see the address space layout of sshd
 
 $ pidof sshd
 3526
-$ cat /proc/3536/maps
+$ cat /proc/3526/maps
 $
 }}}
 
